@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("colors");
 const express = require("express");
 const cors = require("cors");
@@ -40,11 +40,29 @@ app.get("/services", async (req, res) => {
     const services = await cursor.toArray();
     res.send({
       success: true,
-      message: "Successfully got the data",
+      message: "Successfully got the service data",
       data: services,
     });
   } catch (error) {
-    console.log(error.name.bgRed, error.message.bold);
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
+//get individual service details from data as client site requested
+app.get("/services/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const query = { _id: ObjectId(id) };
+    const service = await serviceCollection.findOne(query);
+    res.send({
+      success: true,
+      message: "Successfully got the service data",
+      data: service,
+    });
+  } catch (error) {
     res.send({
       success: false,
       error: error.message,

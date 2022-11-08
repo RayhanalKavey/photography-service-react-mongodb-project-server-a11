@@ -1,152 +1,50 @@
 [
   {
-    "service_id": "04",
-    "title": "Engine Oil Change",
-    "img": "https://i.ibb.co/T2cpBd5/888.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "_id": "1",
+    "title": "Architectural Photography",
+    "img": "https://i.ibb.co/PsLvk55/architectural-photography.jpg",
+    "price": "135",
+    "rating": "4.5",
+    "description": "Both the interior and exterior design of buildings and structures are the subject of architectural photography. From warehouses to city bridges to old country barns, this genre encompasses diverse structures. Often, the photograph showcases the structure's most aesthetically pleasing parts, such as a particular beam or archway. Interesting materials and colors may also be emphasized. Lighting can be challenging in architectural photography and, for exteriors, photographers must know how to work with natural light. Gear such as a tilt-shift lens, a tripod, and a panorama head is often useful. Architectural photographs can be of value to designers, architects, leasing companies, and building investors."
   },
   {
-    "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "_id": "2",
+    "title": "Fashion Photography",
+    "img": "https://i.ibb.co/rf6sdXk/fashion-photography.jpg",
+    "price": "130",
+    "rating": "4.7",
+    "description": "Fashion photography showcases and glamorizes fashion clothing, shoes, and accessories to make them more desirable to consumers. It is commonly published in magazines and online. People may choose this niche over different types of photography because of the opportunity to be highly creative in making photographs eye-catching and appealing. Fashion photographers take a lot of full body shots and work in an array of locations, from fashion shows to studios with full lighting setups to city streets and open fields. They utilize many of the same skills as portrait photographers and must practice good teamwork and communication when working with shoot stylists, creative directors, and models."
   },
   {
-    "service_id": "01",
-    "title": "Full car Repair",
-    "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
-    "price": "200.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "_id": "3",
+    "title": "Portrait Photography",
+    "img": "https://i.ibb.co/vhjhKGR/potrait-photography.jpg",
+    "price": "110",
+    "rating": "4.8",
+    "description": "One of the most common photography styles, portrait photography, or portraiture, aims to capture the personality and mood of an individual or group. Images may be candid or posed, full body or close-ups. Either way, the subject's face and eyes are typically in focus. Lighting and backdrop help to convey tone and emotion. Popular types of photography portraits include senior portraits, family portraits, engagement photos, and professional head-shots. The best portrait photographers make clients feel completely comfortable, so that their expressions are natural and relaxed."
   },
   {
-    "service_id": "02",
-    "title": "Engine Repair",
-    "img": "https://i.ibb.co/5MvmD2g/88.jpg",
-    "price": "150.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "_id": "4",
+    "title": "Wedding Photography",
+    "img": "https://i.ibb.co/2SB4CtH/wedding-photography.jpg",
+    "price": "145",
+    "rating": "4.8",
+    "description": "Event photography of the biggest day of a couple's life is a big responsibility. But with the right equipment, practice, and preparation, you can get great wedding photos. Learn the technical and environmental details wedding photographers need to shoot photos during a long, busy wedding day."
   },
   {
-    "service_id": "03",
-    "title": "Automatic Services",
-    "img": "https://i.ibb.co/wh7t3N3/555.jpg",
-    "price": "30.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "_id": "5",
+    "title": "Food Photography",
+    "img": "https://i.ibb.co/JHvBmMv/food-photography.jpg",
+    "price": "105",
+    "rating": "4.9",
+    "description": "The ability to take mouthwatering shots of food can help you score commercial gigs creating restaurant ads, menu photos, and images for hospitality websites. It's also a great skill to build if you want to post appetizing shots on social media. Food photographers can even license out their work as stock photography. Learn the tricks of the trade to help you cook up some good food photos."
   },
   {
-    "service_id": "06",
-    "title": "Electrical System",
-    "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-    "facility": [
-      {
-        "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      },
-      {
-        "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-      }
-    ]
+    "_id": "6",
+    "title": "Sports Photography",
+    "img": "https://i.ibb.co/7rYWQz2/sports-photography.jpg",
+    "price": "125",
+    "rating": "4.6",
+    "description": "While documenting live sports falls more into the realm of photojournalism, more commercial sports photography can showcase apparel and products, typically worn by an athlete. Whichever type of sports photos you hope to take, the ability to work in fast-paced environments with and around people is essential."
   }
 ]

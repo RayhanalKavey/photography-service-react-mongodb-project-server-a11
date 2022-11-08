@@ -1,6 +1,6 @@
 [
   {
-    "_id": "1",
+    "service_id": "1",
     "title": "Architectural Photography",
     "img": "https://i.ibb.co/PsLvk55/architectural-photography.jpg",
     "price": "135",
@@ -8,7 +8,7 @@
     "description": "Both the interior and exterior design of buildings and structures are the subject of architectural photography. From warehouses to city bridges to old country barns, this genre encompasses diverse structures. Often, the photograph showcases the structure's most aesthetically pleasing parts, such as a particular beam or archway. Interesting materials and colors may also be emphasized. Lighting can be challenging in architectural photography and, for exteriors, photographers must know how to work with natural light. Gear such as a tilt-shift lens, a tripod, and a panorama head is often useful. Architectural photographs can be of value to designers, architects, leasing companies, and building investors."
   },
   {
-    "_id": "2",
+    "service_id": "2",
     "title": "Fashion Photography",
     "img": "https://i.ibb.co/rf6sdXk/fashion-photography.jpg",
     "price": "130",
@@ -16,7 +16,7 @@
     "description": "Fashion photography showcases and glamorizes fashion clothing, shoes, and accessories to make them more desirable to consumers. It is commonly published in magazines and online. People may choose this niche over different types of photography because of the opportunity to be highly creative in making photographs eye-catching and appealing. Fashion photographers take a lot of full body shots and work in an array of locations, from fashion shows to studios with full lighting setups to city streets and open fields. They utilize many of the same skills as portrait photographers and must practice good teamwork and communication when working with shoot stylists, creative directors, and models."
   },
   {
-    "_id": "3",
+    "service_id": "3",
     "title": "Portrait Photography",
     "img": "https://i.ibb.co/vhjhKGR/potrait-photography.jpg",
     "price": "110",
@@ -24,7 +24,7 @@
     "description": "One of the most common photography styles, portrait photography, or portraiture, aims to capture the personality and mood of an individual or group. Images may be candid or posed, full body or close-ups. Either way, the subject's face and eyes are typically in focus. Lighting and backdrop help to convey tone and emotion. Popular types of photography portraits include senior portraits, family portraits, engagement photos, and professional head-shots. The best portrait photographers make clients feel completely comfortable, so that their expressions are natural and relaxed."
   },
   {
-    "_id": "4",
+    "service_id": "4",
     "title": "Wedding Photography",
     "img": "https://i.ibb.co/2SB4CtH/wedding-photography.jpg",
     "price": "145",
@@ -32,7 +32,7 @@
     "description": "Event photography of the biggest day of a couple's life is a big responsibility. But with the right equipment, practice, and preparation, you can get great wedding photos. Learn the technical and environmental details wedding photographers need to shoot photos during a long, busy wedding day."
   },
   {
-    "_id": "5",
+    "service_id": "5",
     "title": "Food Photography",
     "img": "https://i.ibb.co/JHvBmMv/food-photography.jpg",
     "price": "105",
@@ -40,7 +40,7 @@
     "description": "The ability to take mouthwatering shots of food can help you score commercial gigs creating restaurant ads, menu photos, and images for hospitality websites. It's also a great skill to build if you want to post appetizing shots on social media. Food photographers can even license out their work as stock photography. Learn the tricks of the trade to help you cook up some good food photos."
   },
   {
-    "_id": "6",
+    "service_id": "6",
     "title": "Sports Photography",
     "img": "https://i.ibb.co/7rYWQz2/sports-photography.jpg",
     "price": "125",

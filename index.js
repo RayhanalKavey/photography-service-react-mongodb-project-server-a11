@@ -90,6 +90,23 @@ app.get("/services/:id", async (req, res) => {
     });
   }
 });
+// Add services to the services collection
+app.post("/services", async (req, res) => {
+  try {
+    const service = req.body;
+    const result = await serviceCollection.insertOne(service);
+    res.send({
+      success: true,
+      message: "Service details added successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
 
 //----- Reviews API
 //post data from the client site (create method)
@@ -158,7 +175,7 @@ app.get("/reviewsByCategory", async (req, res) => {
   }
 });
 
-//Delete review workinG
+//Delete review
 app.delete("/reviews/:id", async (req, res) => {
   try {
     const id = req.params.id;

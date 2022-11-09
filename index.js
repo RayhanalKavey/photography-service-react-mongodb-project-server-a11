@@ -91,6 +91,25 @@ app.post("/reviews", async (req, res) => {
   }
 });
 
+//get data from the review collection
+app.get("/reviews", async (req, res) => {
+  try {
+    const query = {};
+    const cursor = reviewCollection.find(query);
+    const reviews = await cursor.toArray();
+    res.send({
+      success: true,
+      message: "Successfully got the service data",
+      data: reviews,
+    });
+  } catch {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
 //------------------------- End points end
 app.get("/", (req, res) => {
   res.send("Welcome to Photo Bizz");

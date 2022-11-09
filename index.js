@@ -73,6 +73,30 @@ app.get("/services/:id", async (req, res) => {
 });
 
 //----- Reviews API
+app.get("/reviews", async (req, res) => {
+  try {
+    let query = {};
+    // console.log(req.query.email);
+    if (req.query.email) {
+      query = {
+        email: req.query.email,
+      };
+    }
+    const cursor = reviewCollection.find(query);
+    const reviews = await cursor.toArray();
+    res.send({
+      success: true,
+      message: "Successfully got the service data",
+      data: reviews,
+    });
+  } catch {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
 //post data from the client site (create method)
 app.post("/reviews", async (req, res) => {
   try {
@@ -92,23 +116,6 @@ app.post("/reviews", async (req, res) => {
 });
 
 //get data from the review collection
-app.get("/reviews", async (req, res) => {
-  try {
-    const query = {};
-    const cursor = reviewCollection.find(query);
-    const reviews = await cursor.toArray();
-    res.send({
-      success: true,
-      message: "Successfully got the service data",
-      data: reviews,
-    });
-  } catch {
-    res.send({
-      success: false,
-      error: error.message,
-    });
-  }
-});
 
 //------------------------- End points end
 app.get("/", (req, res) => {

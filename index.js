@@ -29,11 +29,30 @@ async function dbConnect() {
 }
 dbConnect();
 
-//------------------------- workinG  End points
+//-------------------------   End points
 const serviceCollection = client.db("photoBizz").collection("services");
 const reviewCollection = client.db("photoBizz").collection("reviews");
 
 //----- Service API
+//get only 3 data from the data base for home page
+app.get("/servicesHome", async (req, res) => {
+  try {
+    const query = {};
+    const cursor = serviceCollection.find(query);
+    const servicesHome = await cursor.limit(3).toArray();
+    res.send({
+      success: true,
+      message: "Successfully got the service data",
+      data: servicesHome,
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
 //get services data from the data base and send response to the client site (read method)
 app.get("/services", async (req, res) => {
   try {
@@ -73,7 +92,24 @@ app.get("/services/:id", async (req, res) => {
 });
 
 //----- Reviews API
-//GET data for an individual user
+//post data from the client site (create method)
+app.post("/reviews", async (req, res) => {
+  try {
+    const review = req.body;
+    const result = await reviewCollection.insertOne(review);
+    res.send({
+      success: true,
+      message: "Review added successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+//GET reviews data for an individual user
 app.get("/reviews", async (req, res) => {
   try {
     let query = {};
@@ -90,7 +126,7 @@ app.get("/reviews", async (req, res) => {
       message: "Successfully got the service data",
       data: reviews,
     });
-  } catch {
+  } catch (error) {
     res.send({
       success: false,
       error: error.message,
@@ -114,7 +150,7 @@ app.get("/reviewsByCategory", async (req, res) => {
       message: "Successfully got the service data",
       data: reviewInCategory,
     });
-  } catch {
+  } catch (error) {
     res.send({
       success: false,
       error: error.message,
@@ -122,17 +158,18 @@ app.get("/reviewsByCategory", async (req, res) => {
   }
 });
 
-//post data from the client site (create method)
-app.post("/reviews", async (req, res) => {
+//Delete review workinG
+app.delete("/reviews/:id", async (req, res) => {
   try {
-    const review = req.body;
-    const result = await reviewCollection.insertOne(review);
+    const id = req.params.id;
+    const query = { _id: ObjectId(id) };
+    const result = await reviewCollection.deleteOne(query);
     res.send({
       success: true,
-      message: "Successfully got the service data",
+      message: "Review deleted successfully",
       data: result,
     });
-  } catch {
+  } catch (error) {
     res.send({
       success: false,
       error: error.message,

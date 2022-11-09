@@ -31,8 +31,10 @@ dbConnect();
 
 //------------------------- workinG  End points
 const serviceCollection = client.db("photoBizz").collection("services");
+const reviewCollection = client.db("photoBizz").collection("reviews");
 
-//get services data from the data base and send response to the client site
+//----- Service API
+//get services data from the data base and send response to the client site (read method)
 app.get("/services", async (req, res) => {
   try {
     const query = {};
@@ -51,7 +53,7 @@ app.get("/services", async (req, res) => {
   }
 });
 
-//get individual service details from data as client site requested
+//get individual service details from data as client site requested (read method)
 app.get("/services/:id", async (req, res) => {
   try {
     const id = req.params.id;
@@ -63,6 +65,25 @@ app.get("/services/:id", async (req, res) => {
       data: service,
     });
   } catch (error) {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
+//----- Reviews API
+//post data from the client site (create method)
+app.post("/reviews", async (req, res) => {
+  try {
+    const review = req.body;
+    const result = await reviewCollection.insertOne(review);
+    res.send({
+      success: true,
+      message: "Successfully got the service data",
+      data: result,
+    });
+  } catch {
     res.send({
       success: false,
       error: error.message,

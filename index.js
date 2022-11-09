@@ -73,6 +73,7 @@ app.get("/services/:id", async (req, res) => {
 });
 
 //----- Reviews API
+//GET data for an individual user
 app.get("/reviews", async (req, res) => {
   try {
     let query = {};
@@ -88,6 +89,30 @@ app.get("/reviews", async (req, res) => {
       success: true,
       message: "Successfully got the service data",
       data: reviews,
+    });
+  } catch {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+//GET data for an individual category
+app.get("/reviewsByCategory", async (req, res) => {
+  try {
+    let query = {};
+    if (req.query.serviceId) {
+      query = {
+        serviceId: req.query.serviceId,
+      };
+    }
+
+    const cursor = reviewCollection.find(query);
+    const reviewInCategory = await cursor.toArray();
+    res.send({
+      success: true,
+      message: "Successfully got the service data",
+      data: reviewInCategory,
     });
   } catch {
     res.send({

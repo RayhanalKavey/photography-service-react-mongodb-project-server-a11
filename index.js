@@ -164,10 +164,29 @@ app.get("/reviewsByCategory", async (req, res) => {
     const reviewInCategory = await cursor.toArray();
     res.send({
       success: true,
-      message: "Successfully got the service data",
+      message: "Successfully got the service data.",
       data: reviewInCategory,
     });
   } catch (error) {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
+//Update review workinG
+app.get("/reviews/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const query = { _id: ObjectId(id) };
+    const review = await reviewCollection.findOne(query);
+    res.send({
+      success: true,
+      message: "Successfully got the service data.",
+      data: review,
+    });
+  } catch {
     res.send({
       success: false,
       error: error.message,

@@ -193,6 +193,39 @@ app.get("/reviews/:id", async (req, res) => {
     });
   }
 });
+// //Update review workinG
+app.put("/reviews/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const query = { _id: ObjectId(id) };
+    const updatedReview = req.body;
+    console.log(updatedReview);
+    //update in database
+    const option = { upsert: true };
+    const updatedRev = {
+      $set: {
+        reviewerName: updatedReview.reviewerName,
+        email: updatedReview.email,
+        reviewerImg: updatedReview.reviewerImg,
+        serviceTitle: updatedReview.serviceTitle,
+        serviceId: updatedReview.serviceId,
+        reviewDescription: updatedReview.reviewDescription,
+      },
+    };
+
+    const result = await reviewCollection.updateOne(query, updatedRev, option);
+    res.send({
+      success: true,
+      message: "Review updated successfully.",
+      data: result,
+    });
+  } catch {
+    res.send({
+      success: false,
+      error: error.message,
+    });
+  }
+});
 
 //Delete review
 app.delete("/reviews/:id", async (req, res) => {

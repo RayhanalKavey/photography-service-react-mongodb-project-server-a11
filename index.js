@@ -2,6 +2,8 @@ const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("colors");
 const express = require("express");
 const cors = require("cors");
+var jwt = require("jsonwebtoken");
+
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT || 5005;
@@ -23,11 +25,42 @@ async function dbConnect() {
   try {
     await client.connect();
     console.log("Database connected".yellow.italic);
+
+    //JWT START workinG
+    app.post("/jwt", (req, res) => {
+      const user = req.body;
+      console.log(user);
+      //create token
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+        expiresIn: "1h",
+      });
+      res.send({ token });
+    });
+    //JWT enD
   } catch (error) {
     console.log(error.name.bgRed, error.message.bold);
   }
 }
 dbConnect();
+
+//workinG-------------------------------- JWT verify function starT
+function verifyJWT(req, res, next) {
+  const authHeader = req.headers.authorization;
+  ///get token
+  if (!authHeader) {
+    return res.status(401).send({ message: "Unauthorized access." });
+  }
+  const token = authHeader.split(" ")[1];
+
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (err, decoded) {
+    if (err) {
+      return res.status(403).send({ message: "Forbidden access." });
+    }
+    req.decoded = decoded;
+    next();
+  });
+}
+//------------------------------------------JWT verify function enD
 
 //-------------------------   End points
 const serviceCollection = client.db("photoBizz").collection("services");
@@ -126,8 +159,19 @@ app.post("/reviews", async (req, res) => {
     });
   }
 });
-//GET reviews data for an individual user
-app.get("/reviews", async (req, res) => {
+
+//GET reviews data for an individual user workinG
+app.get("/reviews", verifyJWT, async (req, res) => {
+  //jwt
+  const decoded = req.decoded;
+  if (decoded.email !== req.query.email) {
+    res.status(401).send({
+      success: false,
+      message: "Unauthorized access.",
+    });
+  }
+  //jwt
+
   try {
     let query = {};
     // console.log(req.query.email);
@@ -199,7 +243,7 @@ app.put("/reviews/:id", async (req, res) => {
     const id = req.params.id;
     const query = { _id: ObjectId(id) };
     const updatedReview = req.body;
-    console.log(updatedReview);
+    // console.log(updatedReview);
     //update in database
     const option = { upsert: true };
     const updatedRev = {

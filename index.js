@@ -194,7 +194,7 @@ app.get("/reviews", verifyJWT, async (req, res) => {
     });
   }
 });
-//GET data for an individual category
+//GET data for an individual category erroR "/reviewsByCategory/id"
 app.get("/reviewsByCategory", async (req, res) => {
   try {
     let query = {};

@@ -160,16 +160,17 @@ app.post("/reviews", async (req, res) => {
   }
 });
 
-//GET reviews data for an individual user workinG
-app.get("/reviews", verifyJWT, async (req, res) => {
-  //jwt
+//GET reviews data for an individual user
+// app.get("/reviews", verifyJWT, async (req, res) => {
+app.get("/reviews", async (req, res) => {
+  //jwtworkinG
   const decoded = req.decoded;
-  if (decoded.email !== req.query.email) {
-    res.status(401).send({
-      success: false,
-      message: "Unauthorized access.",
-    });
-  }
+  // if (decoded.email !== req.query.email) {
+  //   res.status(401).send({
+  //     success: false,
+  //     message: "Unauthorized access.",
+  //   });
+  // }
   //jwt
 
   try {
@@ -219,7 +220,7 @@ app.get("/reviewsByCategory", async (req, res) => {
   }
 });
 
-//Update review workinG
+//Update review
 app.get("/reviews/:id", async (req, res) => {
   try {
     const id = req.params.id;
@@ -237,7 +238,7 @@ app.get("/reviews/:id", async (req, res) => {
     });
   }
 });
-// //Update review workinG
+// //Update review
 app.put("/reviews/:id", async (req, res) => {
   try {
     const id = req.params.id;
